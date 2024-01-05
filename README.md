@@ -2,15 +2,21 @@
 
 ## Installation
 
-1. Setup Local Environment Variables
+1. Install Python virtual environment
+
+```
+python -m venv .venv
+```
+
+2. Setup Local Environment Variables
 
 ```
 cp .env.example .env
 ```
 
-2. Supply values on .env
+3. Supply values on .env
 
-3. Activate python virtual environment
+4. Activate python virtual environment
 
 - Mac:
 
@@ -24,13 +30,13 @@ source .venv/bin/activate
 source .venv/Script/Activate
 ```
 
-4. Install all dev dependencies
+5. Install all dev dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-5. Run API server
+6. Run API server
 
 ```
 python app.py

@@ -10,7 +10,7 @@ class GetAllUserController(Resource):
         if users:
             return UserView.render_users(users)
         else:
-            return {'error', 'Data not exists'}, 404
+            return {'error': 'Data not exists'}, 404
 
 class GetUserIdController(Resource):
     def get(self, id):
@@ -18,7 +18,7 @@ class GetUserIdController(Resource):
         if user:
             return UserView.render_user(user)
         else:
-            return {'error','User not found'}, 404
+            return {'error':'User not found'}, 404
                     
 class UserAuthController(Resource):
     def post(self):
@@ -29,4 +29,4 @@ class UserAuthController(Resource):
         if user:
             return UserView.render_user(user)
         else:
-            return {'error', 'Invalid Log In'}, 404
+            return {'error': 'Authentication failed. Please check your username and password'}, 401
